@@ -7,7 +7,7 @@ export default function Top5Product() {
   const { isLoadaing, error, data } = useGetTop5ProductsQuery();
   console.log(data);
   if (isLoadaing) return <h1>Loading...</h1>;
-  if (error) return <h1>{error}</h1>;
+  if (error) return <h1>{error.error}</h1>;
 
   return (
     <div>
